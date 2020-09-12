@@ -71,301 +71,37 @@
     \end{tikzpicture}
 }
 
-\newcommand{\make}{GNU \texttt{make}\xspace}
-
-\title{Open Standards}
-\author{Sumner Evans and Robby Zampino}
-\institute{Mines Linux Users Group}
+\title{Python Basics}
+\author{Sumner Evans}
+\institute{Mines ACM}
 
 \begin{document}
 
-\section{What is a Standard?}
+\begin{frame}{A Small Survey}
+    Welcome everyone! I'd like to get to know everyone a bit more and get a feel
+    for everyone's prior experience with programming and Python.
 
-\begin{frame}{What is a Standard?}
-
-        A technical standard is an established norm or requirement for a
-        repeatable technical task. It is usually a formal document that
-        establishes uniform engineering or technical criteria, methods,
-        processes, and practices.\footnote[frame]{
-        \url{https://en.wikipedia.org/wiki/Technical_standard}}
-
-        A de facto standard is a custom or convention that has achieved a
-        dominant position by public acceptance or market forces (for
-        example, by early entrance to the market).\footnote[frame]{
-        \url{https://en.wikipedia.org/wiki/De_facto_standard}}
-
-\end{frame}
-
-\begin{frame}{What can a standard specify?}
-
-        Technical standards can apply to all sort of things.
-        \begin{itemize}
-                        \pause
-                \item Network protocols
-                        \pause
-                \item Filesystems
-                        \pause
-                \item File formats
-                        \pause
-                \item Peripherials
-                        \pause
-                \item APIs
-                        \pause
-                \item Connectors
-        \end{itemize}
-
-
-\end{frame}
-
-\section{What is an \textit{Open} Standard?}
-
-\begin{frame}{What is an \textit{Open} Standard?}
-
-        An open standard is a standard is which a description of the standard
-        is available publically. Open standards frequently also have open
-        development processes, where anyone from the community can help shape
-        the development of the standard. 
-
-\end{frame}
-
-\begin{frame}{Who defines Open Standards?}
-        There are a ton of huge organizations that create open standards.
-        The organizations handle definition, publicization, and  maintenance
-        \pause
-        \begin{itemize}
-                \item IEEE\pause
-                        \begin{itemize}
-                                \item 802.11 Wi-Fi
-                                \item 802.3 Ethernet
-                        \end{itemize}\pause
-                \item IETF\pause
-                        \begin{itemize}
-                                \item RFC793 TCP/IP
-                                \item RFC768 UDP
-                                \item RFC821 SMTP
-                        \end{itemize}
-        \end{itemize}
-\end{frame}
-\begin{frame}{Who defines \textit{Open} Standards?}
-        There are also smaller organizations that focus on a single area.\pause
-        \begin{itemize}
-                \item USB-IF\pause
-                        \begin{itemize}
-                                \item Founded in 1983 by Compaq, Digital, IBM, Intel, Microsoft, NEC and Nortel
-                                \item Focused on maintaining and advocating
-                                        for USB related technologies
-                        \end{itemize}\pause
-                \item VESA\pause
-                        \begin{itemize}
-                                \item DisplayPort
-                                \item Flat Display Mounting Interface (FDMI)
-                        \end{itemize}
-        \end{itemize}
-\end{frame}
-
-\begin{frame}{Why Do We Want Open Protocols?}
-    Open protocols allow
-    \begin{itemize}
-        \item open development
-        \item clean room implementation
-        \item encourages competition
-        \item auditability
+    \begin{itemize}[<+->]
+        \item What year are you in?
+        \item How many of you have programmed in any language before?
+        \item How many of you have programmed in \textbf{Python} before?
     \end{itemize}
 \end{frame}
-% - Why it's better than closed protocols
-%   - Can have multiple clients/servers all adhering to the protocol
 
-\begin{frame}{Examples of Closed Standards}
-        \begin{itemize}
-                \item Skype
-                        \pause
-                \item Whatsapp (based on XMPP)
-                        \pause
-                \item Chromecast
-                        \pause
-                \item Slack
-                        \pause
-                \item Lightning Cables
-                        \pause
-                \item HDMI
-                        \pause
-                \item CUDA
-        \end{itemize}
+\begin{frame}{Overview}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[hideallsubsections]
 \end{frame}
 
-\begin{frame}{A Few Terms}
-    There are three main categories of architectures into which most
-    applications that are not running on a single machine can be placed.
-    \pause
+\section{What is Python?}
 
-    \begin{enumerate}
-        \item \textbf{Client-server}: also known as \textit{centralized} or
-            \textit{master-slave}, all producers and consumers connect to a
-            single central server. (Example: GitLab)
-        \item \textbf{Decentralized}: the producer and consumer connect directly
-            to one another. (Example: BitTorrent)
-        \item \textbf{Federated}: producers and consumers connect servers,
-            and the servers connect to one another in a decentralized manner.
-            (Example: Matrix)
-    \end{enumerate}
-    \pause
-
-    Each can use open protocols, however federated and decentralized systems
-    allow individuals or groups to own their own infrastructure and still
-    connect to the broader userbase.
+\begin{frame}{Overview}
+    \begin{itemize}[<+->]
+        \item What is Python?
+        \item How many of you have programmed in any language before?
+        \item How many of you have programmed in \textbf{Python} before?
+    \end{itemize}
 \end{frame}
-
-\section{Cryptographic Standards}
-
-\begin{frame}{Never Roll your own Cryptography}
-    Tons of researchers and penetration testers have already verified the
-    cryptographic security of all of the major cryptographic algorithms.
-    \pause
-
-    Open standards like the Advanced Encryption Standard (AES), RSA, OpenPGP,
-    Elliptic Curve DSA, and all of the common hash functions underpin the
-    security of the modern internet.
-    \pause
-
-    If these were not open standards, they would not be nearly as well
-    widespread or trusted.
-\end{frame}
-
-\begin{frame}{The Signal Protocol}
-    The Signal Protocol is a protocol developed by Open Whisper Systems for the
-    Signal messenger.
-    \pause
-
-    Many closed-source programs including Facebook Messenger and WhatsApp
-    \textit{claim} to have implemented this same protocol in their instant
-    messenger applications.
-    \pause
-
-    The protocol is a combination of well-known cryptographic algorithms
-    including triple Elliptic-Curve Diffie-Hellman and a \textit{Double Ratchet
-        Algorithm}.
-    \pause
-
-    Due to the double ratchet, if an attacker cracks the key used to encrypt a
-    single message, they will not be able to decipher subsequent or previous
-    messages.
-\end{frame}
-
-\section{Application Layer Open Standards in Industry}
-
-\begin{frame}{OpenRTB}
-    The Interactive Advertising Bureau (IAB) publishes a specification for
-    real-time bidding (RTB) on ad impression inventory.
-
-    The protocol is a multi-layer protocol. This diagram shows the main
-    components:\footnote[frame]{
-        \url{https://github.com/InteractiveAdvertisingBureau/openrtb/blob/master/OpenRTB v3.0 FINAL.md}}
-
-    \includegraphics[width=\textwidth]{./graphics/openrtb}
-\end{frame}
-
-\begin{frame}{Check 21}
-    In 2003, the Federal Government passed the \textit{Check Clearing for the
-        21st Century Act} (Check 21) which established the legality of using
-    substitute checks and is the legal basis for remote deposit.
-    \pause
-
-    The Government gave no actual explanation of how it was supposed to work so
-    the banking industry adopted a few of open standards for handling
-    non-physical check deposits.
-    \pause
-
-    One such specification that was adopted is the \textit{Image Cash Letter}
-    specification which dictates the file format for electronic check deposits.
-\end{frame}
-
-\begin{frame}{Image Cash Letter}
-    Unfortunately, I'm very familiar with this file format due to working with
-    it at one of my jobs.
-
-    The Image Cash Letter format is a binary format with a collection of
-    \textit{records}, each specifying something like file metadata, bundle
-    metadata, check information, or check images.
-
-    Each of the records has fixed width binary fields, and \textit{everything}
-    (including numbers) is encoded as EBCDIC (except for the actual TIFF image
-    data).
-\end{frame}
-
-\section{Application Layer Open Standards in Consumer Technology}
-
-\begin{frame}{IRC}
-    Internet Relay Chat (IRC) is an application layer protocol for textual
-    communication. It is a client-server protocol where users can connect to a
-    central server using a variety of clients (there are a \textit{ton} of
-    clients)
-    \pause
-
-    The IRC protocol is available at https://tools.ietf.org/html/rfc1459
-    The information here can be used to create a client for this protocol.
-    It can also be used in a slightly stupider way.
-\end{frame}
-
-
-\begin{frame}{Matrix}
-    Matrix is an open standard for ``secure, decentralized, real-time
-    communication.''\footnote[frame]{https://matrix.org/}
-    \pause
-
-    It uses the same double ratchet algorithm as the Signal Protocol, but is
-    designed with large rooms of thousands of people (much like IRC) in mind.
-    \pause
-
-    Additionally, it is designed to operate in a federated system; unlike Signal
-    which uses a client-server model.
-\end{frame}
-
-\begin{frame}{Subsonic}
-    Subsonic was an Open Source music server with an API for browsing songs,
-    playlists, albums, and artists, among other features. Many clients were
-    created around that API.
-    \pause
-
-    After the author closed sourced the application code, many people created
-    forks of the last open source version of Subsonic.
-    \pause
-
-    Although the source code is still closed, Subsonic still publishes new
-    versions of the Subsonic API specification, and the fork authors have
-    implemented those endpoints in the forked versions of Subsonic.
-\end{frame}
-
-\begin{frame}{Case Study: Revel}
-    Subsonic is a Java application, and all of the direct forks are also Java
-    applications. This means they are slow and memory intensive.
-
-    Robby has been working on an alternate server called \textit{Revel} which
-    adheres to the Subsonic API spec.
-    \pause
-
-    Revel is written in Elixir and has no code in common with the original
-    Subsonic server, yet you can \textit{basically} drop in Revel in place of Subsonic
-    and clients will not notice a difference. Your server, however, will enjoy
-    all the memory it get's back.
-\end{frame}
-
-\begin{frame}{Case Study: Sublime Music}
-    All of the Subsonic clients for desktop suck. (There are a few good ones for
-    mobile.) The web app is awful, and the existing desktop apps are hot
-    garbage.
-
-    Sumner has been working on an alternate client called \textit{Sublime Music}
-    which can connect to any server which adheres to the Subsonic API.
-
-    \begin{center}
-        \includegraphics[width=0.57\textwidth]{./graphics/sublime-music}
-    \end{center}
-\end{frame}
-
-% The subtopics would be how open protocols drive Industry, why they are
-% superior to closed protocols, and a case study in how they can be good for
-% consumers as well. Obviously that last one would be subsonic. I'm not sure
-% about the order, but that's the general idea.
 
 \end{document}
 % Local Variables:

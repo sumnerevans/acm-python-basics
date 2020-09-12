@@ -8,6 +8,7 @@ examples/%.pdf: examples/%.tex
 
 %.pdf: %.tex acm.cls
 	$(LATEX_COMPILER) $<
+	$(LATEX_COMPILER) $<
 
 clean:
 	rm -f *.log *.aux *.log *.out *.bbl *.blg *.nav *.snm *.toc
