@@ -21,6 +21,7 @@
   * Variables
   * `print`
   * Primitive data types
+  * Operating on data
   * `if` statements
   * `for` and `while` loops
 
