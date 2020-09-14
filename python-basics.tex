@@ -95,12 +95,114 @@
 
 \section{What is Python?}
 
-\begin{frame}{Overview}
+\begin{frame}{A Bit of History}
     \begin{itemize}[<+->]
-        \item What is Python?
-        \item How many of you have programmed in any language before?
-        \item How many of you have programmed in \textbf{Python} before?
+        \item Python first appeared in early 1991. \emph{This means that Python
+            is older than Java and Ruby.}
+        \item Guido van Rossum (GvR, the creator of Python) designed his
+            language with \textbf{emphasis on readability}.
+        \item Python was named after \emph{Monty Python's Flying Circus}.
+        \item The language quickly gained popularity because of its appeal to
+            long-time UNIX/C hackers\footnote{See the Jargon File on hackers
+            vs.  crackers}.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Why Learn Python?}
+    \begin{itemize}[<+->]
+        \item Python is a \textit{general purpose, multi-paradigm} language
+            meaning that it is very flexible and can be used in many different
+            scenarios.
+        \item Some of the main applications of Python in industry are web
+            programming, data science, machine learning, automation scripting.
+        \item Python is an easy language to learn.
+        \item Python runs anywhere, and generally requires little setup compared
+            to other languages.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{A Note on Python 2 and Python 3}
+    There are two main versions of Python: Python 2 and Python 3. As of earlier
+    this year, Python 2 is no longer supported, so nobody should use it.
+    Unfortunately, many projects and operating systems have not gotten with the
+    times and are still reliant on Python 2.
+
+    \pause
+    Python 3 has many major advantages over Python 2 as it fixes many annoying
+    inconsistencies with the older version.
+
+    \pause
+    For the purposes of this presentation, we will be talking \emph{strictly of
+    Python 3}.
+\end{frame}
+
+\section{Programming Basics in Python}
+
+\begin{frame}{Follow Along}
+    You can either install Python on your machine or use an online Python
+    environment such as \url{https://repl.it/languages/Python3}.
+
+    Most of the things we will cover today can be done directly in the REPL
+    (read-evaluate-print-loop) on the right.
+\end{frame}
+
+\begin{frame}[fragile]{Storing Data}
+    At its core, programming is about storing and manipulating \textit{data}.
+
+    \pause
+    In almost every programming language, there is a concept of a
+    \textbf{variable} which \textit{stores} data.
+
+    \pause
+    In Python, you can create a variable using the following syntax:
+    \begin{minted}{python}
+        name = "Sumner"
+        age = 22
+        likes_acm = True
+    \end{minted}
+
+    \textit{If you have ever programmed in a language such as Java, you may
+    notice that there is no special keyword for declaring a variable.}
+\end{frame}
+
+\begin{frame}[fragile]{Showing the Data}
+    Storing data isn't any good unless you can actually use it for something
+    useful. \pause One of the most basic things we can do with the data stored
+    is print it out to the console.
+
+    To print anything in Python, use the \texttt{print} function:
+    \begin{minted}{python}
+        name = "Sumner"
+        age = 22
+        print(name)
+        print(age)
+    \end{minted}
+
+    \pause
+    If you want to print multiple things at once, you can separate them with a
+    comma:
+    \begin{minted}{python}
+        print(name, age)
+    \end{minted}
+\end{frame}
+
+\begin{frame}{What Sorts of Data Can We Store?}
+    There are many different \textit{types} of data that we can store.
+\end{frame}
+
+\begin{frame}{Wh}
+    (<>)
+\end{frame}
+
+\begin{frame}{ohea}
+    * Variables
+        * Data types
+    * Basic operations on simple data types
+    * If statements
+    * For loops
+    * Functions
+        * Parameters
+    * Union data types
 \end{frame}
 
 \end{document}
