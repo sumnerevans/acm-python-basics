@@ -4,7 +4,7 @@
 ## Credits
 
 * Author: [Sumner Evans](https://sumnerevans.com)
-* Significant portions of the content were taken from
+* Some of the content was taken from
   [Jack Rosenthal's](https://github.com/jackrosenthal)
   [Pythonic Way presentation](https://github.com/jackrosenthal/lug-python-presentation).
 
@@ -19,7 +19,7 @@
 * Python Basics
 
   * Variables
-  * `print`
+  * `print`, `input`
   * Primitive data types
   * Operating on data
   * `if` statements
@@ -42,6 +42,7 @@
 
 * Classes
 
-  * 
+  * Basics
+  * `__init__`
 
 * Resources for Understanding Python Code

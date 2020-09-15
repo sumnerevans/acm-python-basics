@@ -25,6 +25,7 @@
 \usetikzlibrary{decorations.pathreplacing,calc,arrows.meta,shapes,graphs}
 
 \AtBeginEnvironment{minted}{\singlespacing\fontsize{10}{10}\selectfont}
+\setmainfont{Open Sans Light}
 \usefonttheme{serif}
 
 \makeatletter
@@ -187,6 +188,27 @@
     \end{minted}
 \end{frame}
 
+\begin{frame}[fragile]{Getting Data From the User}
+    Often, we want to get some input from the user and store it in a variable.
+    \pause To do this in Python, we use the \texttt{input} function.
+
+    \begin{minted}{python}
+        name = input()
+        print("Hello", name)
+    \end{minted}
+
+    \pause
+    We can also optionally include prompt text:
+    \begin{minted}{python}
+        age = int(input("How old are you? "))
+        print("In one year, you will be", age + 1, "years old")
+    \end{minted}
+
+    \pause
+    What do you think the difference between \texttt{input()} and
+    \texttt{int(input())} is?
+\end{frame}
+
 \begin{frame}{What Sorts of Data Can We Store?}
     There are many different \textit{types} of data that we can store in Python.
     Here are the most basic data types (primitives):
@@ -203,8 +225,101 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Wh}
-    (<>)
+\begin{frame}[fragile]{Manipulating Data: Assigning a New Value to a Variable}
+    Having variables to store is nice, but a lot of times we want to modify the
+    value stored in the variable!
+
+    To do that, we use a very similar syntax to defining variables:
+    \begin{minted}{python}
+        name = "Sumner"  # declares a variable and gives it an
+                         # initial value
+        print(name)
+
+        name = "Jack"    # assigns the value "Jack" to the "name"
+                         # variable
+        print(name)
+    \end{minted}
+\end{frame}
+
+\begin{frame}{Manipulating Data: Basic Operations}
+    Similar to how you can perform operations on variables in algebra, you can
+    perform operations on variables. Here are some basic operations on primitive
+    data types in Python:
+
+    \begin{itemize}
+        \item \texttt{+}, \texttt{-}, \texttt{*}, \texttt{/}, \texttt{//}: add,
+            subtract, multiply, divide, integer division.
+        \item \texttt{**}: exponentiate ($3^8$ would be written \texttt{3**8}).
+        \item \texttt{<}, \texttt{>}, \texttt{==}: tests if two numbers are less
+            than, greater than, equal to each other, respectively.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Try it Yourself!}
+    \textbf{Try creating a few different variables of various types and
+    performing operations on them.}
+
+    A few examples to get you started:
+    \begin{minted}{python}
+        pi = 3.14159265
+        r = 10
+        print("diameter =", pi * (r ** 2))
+
+        email = input("Enter your email: ")
+        email_again = input("Verify your email: ")
+        print(email == email_again)
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Making Decisions: Selection Using \texttt{if}}
+    It's all well and good that we can compare numbers and get a boolean value,
+    but we need to make \textit{decisions} with that information. That's where
+    \textbf{\texttt{if} statements} come in.
+
+    \pause
+    The syntax for \texttt{if} statements in Python is:
+    \begin{minted}{python}
+        if condition1:
+            # do whatever is in this indented section if condition1
+            # is True
+        elif condition2:
+            # do whatever is in this indented section if condition2
+            # is True
+        else:
+            # do whatever is in this indented section otherwise
+    \end{minted}
+
+    You can have arbitrary many \texttt{elif} blocks (including no elif blocks).
+    It is also not necessary to have an \texttt{else} block.
+\end{frame}
+
+\begin{frame}[fragile]{Making Decisions: Selection Using \texttt{if}: Example}
+    Here is a simple example of an \texttt{if} statement at work:
+    \begin{minted}{python}
+        likes_python = input("Do you like Python? (y/n)")
+        if likes_python == "y":
+            print("You like Python!")
+        elif likes_python == "n":
+            print("You don't like Python :(")
+        else:
+            print("I don't know if you like Python...")
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Making Decisions: Selection Using \texttt{if}: Your Turn!}
+    \textbf{Now it's your turn!} Try to write some Python which does the
+    following:
+
+    \begin{enumerate}
+        \item Creates a variable with a secret number of your choice.
+        \item Asks the user to guess a number.
+        \item Tells the user if their guess is above, below, or equal to the
+            secret number.
+    \end{enumerate}
+
+    \textit{Extra Credit:} Look up the documentation for the
+    \texttt{random.randint} function and see if you can make the secret number
+    random.
 \end{frame}
 
 \begin{frame}{ohea}
